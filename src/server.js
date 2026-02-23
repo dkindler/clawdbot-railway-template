@@ -299,9 +299,6 @@ const app = express();
 app.disable("x-powered-by");
 app.use(express.json({ limit: "1mb" }));
 
-// Minimal health endpoint for Railway.
-app.get("/setup/healthz", (_req, res) => res.json({ ok: true }));
-
 async function probeGateway() {
   // Don't assume HTTP — the gateway primarily speaks WebSocket.
   // A simple TCP connect check is enough for "is it up".
