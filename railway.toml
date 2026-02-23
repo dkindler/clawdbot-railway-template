@@ -2,7 +2,7 @@
 builder = "dockerfile"
 
 [deploy]
-healthcheckPath = "/healthz"
+healthcheckPath = "/__openclaw__/canvas/"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 
